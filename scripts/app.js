@@ -312,11 +312,14 @@ const alterarSenha = async () => {
 
   showToast('Alterando senha...');
   try {
-    const r = await fetch(WORKER_URL + 'change-password', {
-      method: 'POST',
-      headers: getAuthHeaders(),
-      body: JSON.stringify({ senhaAtual, senhaNova })
-    });
+    const r = await fetch(WORKER_URL + 'profile', {
+  method: 'PUT',
+  headers: getAuthHeaders(),
+  body: JSON.stringify({
+    senhaAtual,
+    novaSenha: senhaNova
+  })
+});
     const data = await r.json();
     if (!r.ok) {
       showToast(data.error || 'Erro ao alterar senha', 'var(--red)'); return;
