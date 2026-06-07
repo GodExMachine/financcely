@@ -39,25 +39,3 @@ financcely/
 ├── sw.js           # Service Worker
 └── README.md
 ```
-
----
-
-## Como rodar localmente
-
-O Service Worker exige servidor HTTP — não funciona via `file://`.
-
-```bash
-git clone https://github.com/seu-usuario/financcely.git
-cd financcely
-npx serve .
-```
-
-Acesse `http://localhost:3000`.
-
-Para instalar como PWA no celular: abra no Chrome, menu → "Adicionar à tela inicial".
-
----
-
-## Licença
-
-MIT
