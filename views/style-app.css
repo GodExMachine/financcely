@@ -15,6 +15,8 @@
   --red: #ff6584;
   --yellow: #f7c844;
   --blue: #38b2f7;
+  --topbar: 56px;
+  --navbar: 60px;
   --radius: 14px;
   --radius-sm: 8px;
   --shadow: 0 4px 24px rgba(0,0,0,0.4);
@@ -67,33 +69,13 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
 .icon-btn:hover { background: var(--surface3); color: var(--text); }
 
 /* MAIN CONTENT */
-.main-content {
-  flex: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-bottom: 90px;
-}
+.main-content { flex: 1; overflow-y: auto; overflow-x: hidden; padding-bottom: calc(var(--navbar) + 16px); }
 .page { display: none; padding: 16px; animation: fadeIn 0.2s ease; }
 .page.active { display: block; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 
 /* BOTTOM NAV */
-.navbar {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  height: var(--navbar);
-
-  background: var(--surface);
-  border-top: 1px solid var(--border);
-
-  display: flex;
-  align-items: stretch;
-
-  z-index: 1000;
-}
+.navbar { height: var(--navbar); background: var(--surface); border-top: 1px solid var(--border);
   display: flex; align-items: stretch; position: sticky; bottom: 0; z-index: 100; flex-shrink: 0;
   padding-bottom: env(safe-area-inset-bottom); }
 .nav-item { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
