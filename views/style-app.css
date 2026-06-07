@@ -20,8 +20,6 @@
   --shadow: 0 4px 24px rgba(0,0,0,0.4);
   --font: 'DM Sans', sans-serif;
   --mono: 'DM Mono', monospace;
-  --topbar: 56px;
-  --navbar: 60px;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(--text); font-family: var(--font); }
