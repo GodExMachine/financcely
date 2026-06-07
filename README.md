@@ -2,7 +2,7 @@
 
 Controle financeiro pessoal. PWA leve, sem frameworks, que funciona direto no celular.
 
-[Acessar o app](https://godexmachine.github.io/financcely/index.html) 
+[Acessar o app](contasemdia.online) 
 
 ---
 
