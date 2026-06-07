@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
 <title>Financcely — Suas finanças, simples e claras</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -170,7 +171,10 @@ footer {
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">💸 Finance<span>cely</span></a>
-  <a class="nav-cta" href="app.html">Começar grátis</a>
+  <div style="display:flex;gap:10px;align-items:center">
+    <a class="nav-cta" href="app.html" style="background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--text)">Entrar</a>
+    <a class="nav-cta" href="app.html">Começar grátis</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -180,6 +184,7 @@ footer {
   <p>Registre gastos, acompanhe metas, controle cartões e veja relatórios — tudo em um app leve que funciona no seu celular.</p>
   <div class="hero-actions">
     <a class="btn-hero btn-hero-primary" href="app.html">🚀 Criar conta grátis</a>
+    <button class="btn-hero btn-hero-secondary" id="btnInstall" style="display:none" onclick="installApp()">📲 Instalar app</button>
     <a class="btn-hero btn-hero-secondary" href="#features">Ver funcionalidades</a>
   </div>
 
@@ -315,4 +320,28 @@ footer {
 </footer>
 
 </body>
+<script>
+  let deferredPrompt = null;
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    document.getElementById('btnInstall').style.display = 'inline-flex';
+  });
+
+  const installApp = async () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === 'accepted') {
+      document.getElementById('btnInstall').style.display = 'none';
+    }
+    deferredPrompt = null;
+  };
+
+  window.addEventListener('appinstalled', () => {
+    document.getElementById('btnInstall').style.display = 'none';
+    deferredPrompt = null;
+  });
+</script>
 </html>
