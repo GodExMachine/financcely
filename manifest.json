@@ -16,13 +16,13 @@
       "purpose": "any"
     },
     {
-      "src": "views/web-app-manifest-192x192.png",
+      "src": "views/icone.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "views/web-app-manifest-512x512.png",
+      "src": "views/icone.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
