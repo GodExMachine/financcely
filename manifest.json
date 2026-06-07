@@ -1,6 +1,6 @@
 {
-  "name": "Contas em Dia",
-  "short_name": "Contas em Dia",
+  "name": "Finance io",
+  "short_name": "Finance io",
   "description": "Controle financeiro pessoal",
   "start_url": "./app.html",
   "display": "standalone",
