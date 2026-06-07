@@ -2,7 +2,7 @@
 
 Controle financeiro pessoal. PWA leve, sem frameworks, que funciona direto no celular.
 
-[Acessar o app](https://seu-usuario.github.io/financcely) · [Landing page](https://seu-usuario.github.io/financcely/landing.html)
+[Acessar o app](https://godexmachine.github.io/financcely/index.html) 
 
 ---
 
