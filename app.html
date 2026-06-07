@@ -361,7 +361,53 @@
       <div id="relatorioContent"></div>
     </div>
 
-    
+    <!-- CONFIGURAÇÕES -->
+    <div class="page" id="page-config">
+      <div class="section-header">
+        <button class="link-btn" onclick="navigate('mais')"><i class="fas fa-arrow-left"></i> Voltar</button>
+      </div>
+
+      <!-- Info do usuário -->
+      <div class="card" style="margin-bottom:12px">
+        <div style="display:flex;align-items:center;gap:14px">
+          <div style="width:48px;height:48px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">
+            <i class="fas fa-user"></i>
+          </div>
+          <div>
+            <div id="configNome" style="font-size:16px;font-weight:700;color:var(--text)">—</div>
+            <div id="configEmail" style="font-size:13px;color:var(--text3);margin-top:2px">—</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alterar senha -->
+      <div class="card" style="margin-bottom:12px">
+        <div class="section-title" style="margin-bottom:14px"><i class="fas fa-lock" style="color:var(--accent);margin-right:8px"></i>Alterar Senha</div>
+        <div class="form-group">
+          <label>Senha atual</label>
+          <input type="password" id="cfgSenhaAtual" placeholder="••••••••" autocomplete="current-password">
+        </div>
+        <div class="form-group">
+          <label>Nova senha</label>
+          <input type="password" id="cfgSenhaNova" placeholder="Mínimo 6 caracteres" autocomplete="new-password">
+        </div>
+        <div class="form-group">
+          <label>Confirmar nova senha</label>
+          <input type="password" id="cfgSenhaConfirm" placeholder="Repita a nova senha" autocomplete="new-password">
+        </div>
+        <button class="btn-primary" onclick="alterarSenha()" style="width:100%">
+          <i class="fas fa-key" style="margin-right:6px"></i>Salvar nova senha
+        </button>
+      </div>
+
+      <!-- Zona de perigo -->
+      <div class="card" style="border-color:rgba(255,101,132,0.25)">
+        <div class="section-title" style="margin-bottom:14px;color:var(--red)"><i class="fas fa-exclamation-triangle" style="margin-right:8px"></i>Zona de Perigo</div>
+        <button class="btn-secondary" onclick="clearAll()" style="width:100%;border-color:rgba(255,101,132,0.4);color:var(--red)">
+          <i class="fas fa-trash-alt" style="margin-right:6px"></i>Limpar todos os dados
+        </button>
+      </div>
+    </div>
 
   </div><!-- /main-content -->
 
