@@ -1,6 +1,6 @@
 const CACHE_NAME = 'Financcely-v1.0';
 const ASSETS = [
-  './index.html',
+  './app.html',
   './manifest.json'
 ];
 

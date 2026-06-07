@@ -2,7 +2,7 @@
   "name": "Financcely",
   "short_name": "Financcely",
   "description": "Controle financeiro pessoal",
-  "start_url": "./index.html",
+  "start_url": "./app.html",
   "display": "standalone",
   "background_color": "#0f0f13",
   "theme_color": "#0f0f13",
